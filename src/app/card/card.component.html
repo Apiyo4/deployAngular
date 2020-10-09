@@ -1,0 +1,6 @@
+<div *ngFor='let card of cards; let i =  index'>
+    <h4>{{card.title}}</h4>
+    <button (click)="getDetails(i)" >Show details</button>
+    <app-card-detail *ngIf='card.showDetails' [card]='card' (isDone)='hideCardDetail($event, i)'></app-card-detail>
+
+</div>
